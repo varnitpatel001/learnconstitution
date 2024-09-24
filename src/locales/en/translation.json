@@ -1,0 +1,23 @@
+{
+    "enable_audio": "Enable Audio",
+    "preamble_title": "The Preamble",
+    "preamble_position": "Core of the Constitution",
+    "preamble_text": "The Preamble serves as an introduction to the Constitution of India, reflecting the vision and values of the nation.",
+    
+    "rights_title": "Fundamental Rights",
+    "rights_position": "Part III of the Constitution",
+    "rights_text": "The Fundamental Rights guarantee civil liberties to all citizens of India.",
+  
+    "directive_title": "Directive Principles of State Policy",
+    "directive_position": "Part IV of the Constitution",
+    "directive_text": "Guidelines for the governance of the country.",
+  
+    "parliament_title": "Parliament of India",
+    "parliament_position": "Legislative Authority",
+    "parliament_text": "The supreme legislative body responsible for framing laws and governing the country.",
+  
+    "judiciary_title": "The Judiciary",
+    "judiciary_position": "Guardian of the Constitution",
+    "judiciary_text": "The Judiciary plays a crucial role in interpreting the Constitution and safeguarding the rights of citizens."
+  }
+  

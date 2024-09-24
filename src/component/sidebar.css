@@ -1,0 +1,23 @@
+/* Sidebar Menu Item Styling */
+
+.sidebar-menu-item {
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    padding: 10px px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  /* Hover effect */
+  .sidebar-menu-item:hover {
+    background-color: #555; /* Background color on hover */
+    transform: scale(1.05); /* Slightly scale up */
+  }
+  
+  /* Active link effect */
+  .activeClicked .sidebar-menu-item {
+    background-color: #444; /* Background color when active */
+    transform: scale(1.1); /* Slightly scale up */
+    color: #f1f1f1; /* Change text color when active */
+  }
+  

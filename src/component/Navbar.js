@@ -1,102 +1,52 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Navbar(props) {
   return (
-    <div>
-   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
-    <button
-      className="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+    <div
+      style={{
+        
+        display: 'flex',
+        height: '60px', // Adjust the height as needed
+        width: '95%', // Span the entire width of the viewport
+        overflow: 'hidden', // Hide any overflow if needed
+        position: 'fixed', // Fix the position relative to the viewport
+        top: '0', // Align it to the top of the viewport
+        right: '0', // Align it to the right of the viewport
+        backgroundColor: '#fff', // Set background color to white
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)', // Optional: Add a shadow for better visibility
+        zIndex: '1000', // Ensure it sits above other content
+        alignItems: 'center', // Center content vertically
+        padding: '0 20px', // Optional: Add horizontal padding
+        justifyContent: 'flex-end', // Align content to the right
+      }}
     >
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">
-            Home
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
-            Link
-          </a>
-        </li>
-        <li className="nav-item dropdown">
-          <a
-            className="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown
-          </a>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <a className="dropdown-item" href="#">
-                Action
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Another action
-              </a>
-            </li>
-            <li>
-              <hr className="dropdown-divider" />
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li className="nav-item">
-          <a
-            className="nav-link disabled"
-            href="#"
-            tabIndex="-1"
-            aria-disabled="true"
-          >
-            Disabled
-          </a>
-        </li>
-      </ul>
-      <form className="d-flex">
-        <input
-          className="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button className="btn btn-outline-success" type="submit">
-          Search
-        </button>
-      </form>
+      <nav className="navbar navbar-light bg-light" style={{ width: 'fit-content', margin: '0' }}>
+        <div className="container-fluid" >
+          <form className="d-flex ms-auto" style={{ width: '90%',marginleft:'30%'}}>
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              style={{ flexGrow: 1 }}
+            />
+            <button className="btn btn-outline-primary" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
     </div>
-  </div>
-</nav>
-
-    </div>
-  )
+  );
 }
 
-Navbar.propTypesropTypes = {
-    title: PropTypes.string.isRequired,
-    about: PropTypes.string
-}
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  about: PropTypes.string,
+};
+
 Navbar.defaultProps = {
-    title: 'put text here',
-    about: 'About'
+  title: 'put text here',
+  about: 'About',
 };
