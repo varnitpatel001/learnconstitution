@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './styles.css'; // Import your CSS file
-import './style-start.css'; // Additional styles
+import './styles.css'; // Import the scoped CSS file
 
 // Import images
 import constitutionImage from './images/constitution.jpeg';
@@ -19,65 +18,53 @@ import judiciaryAudio from './audio/judicaryaudio.mp3';
 const Home = () => {
   const [isAudioEnabled, setIsAudioEnabled] = useState(false);
 
+  // Audio references
   const constitutionRef = useRef(null);
   const libertyRef = useRef(null);
   const stateRef = useRef(null);
   const parliamentRef = useRef(null);
   const judiciaryRef = useRef(null);
 
+  // Play audio if enabled
   const handlePlayAudio = (audioRef) => {
     if (isAudioEnabled) {
       audioRef.current.play();
     }
   };
 
+  // Stop and reset audio
   const handleStopAudio = (audioRef) => {
     if (isAudioEnabled) {
       audioRef.current.pause();
-      audioRef.current.currentTime = 0; // Reset the audio
+      audioRef.current.currentTime = 0; // Reset to start
     }
   };
 
+  // Enable audio when the button is clicked
   const enableAudio = () => {
     setIsAudioEnabled(true);
   };
 
   return (
-    <div>
-      {/* Button to enable audio interaction */}
+    <div className="home-page">
+      {/* Render Enable Audio button if audio is disabled */}
       {!isAudioEnabled && (
-        <button
-        onClick={enableAudio}
-        style={{
-          marginBottom: '20px',
-          padding: '10px 20px',
-          backgroundColor: '#4CAF50', // Green background
-          color: '#fff', // White text color
-          border: 'none', // No border
-          borderRadius: '5px', // Rounded corners
-          fontSize: '16px', // Font size
-          cursor: 'pointer', // Pointer cursor on hover
-          transition: 'background-color 0.3s ease', // Smooth background color transition
-        }}
-        onMouseEnter={(e) => (e.target.style.backgroundColor = '#45a049')} // Darken on hover
-        onMouseLeave={(e) => (e.target.style.backgroundColor = '#4CAF50')} // Reset on leave
-      >
-        Enable Audio
-      </button>
-      
+        <button className="audio-btn" onClick={enableAudio}>
+          Enable Audio
+        </button>
       )}
 
+      {/* Testimonial Grid */}
       <main className="testimonial-grid">
+        {/* Testimonial 1 - The Preamble */}
         <article
-          className="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100"
+          className="testimonial flow bg-primary-400 quote text-neutral-100"
           onMouseEnter={() => handlePlayAudio(constitutionRef)}
           onMouseLeave={() => handleStopAudio(constitutionRef)}
         >
           <audio ref={constitutionRef} src={constitutionAudio}></audio>
           <div className="flex">
-            <div>
-              <img src={constitutionImage} alt="Constitution of India" />
-            </div>
+            <img src={constitutionImage} alt="Constitution of India" />
             <div>
               <h2 className="name">The Preamble</h2>
               <p className="position">Core of the Constitution</p>
@@ -91,6 +78,7 @@ const Home = () => {
           </p>
         </article>
 
+        {/* Testimonial 2 - Fundamental Rights */}
         <article
           className="testimonial flow bg-secondary-400 text-neutral-100"
           onMouseEnter={() => handlePlayAudio(libertyRef)}
@@ -98,9 +86,7 @@ const Home = () => {
         >
           <audio ref={libertyRef} src={libertyAudio}></audio>
           <div className="flex">
-            <div>
-              <img src={libertyImage} alt="Fundamental Rights" />
-            </div>
+            <img src={libertyImage} alt="Fundamental Rights" />
             <div>
               <h2 className="name">Fundamental Rights</h2>
               <p className="position">Part III of the Constitution</p>
@@ -114,18 +100,17 @@ const Home = () => {
           </p>
         </article>
 
+        {/* Testimonial 3 - Directive Principles */}
         <article
-          className="testimonial flow bg-neutral-100 text-secondary-400"
+          className="testimonial flow bg-secondary-500 text-neutral-100"
           onMouseEnter={() => handlePlayAudio(stateRef)}
           onMouseLeave={() => handleStopAudio(stateRef)}
         >
           <audio ref={stateRef} src={stateAudio}></audio>
           <div className="flex">
+            <img src={stateImage} alt="Directive Principles" />
             <div>
-              <img src={stateImage} alt="Directive Principles" />
-            </div>
-            <div>
-              <h2 className="name">Directive Principles of State Policy</h2>
+              <h2 className="name">Directive Principles</h2>
               <p className="position">Part IV of the Constitution</p>
             </div>
           </div>
@@ -137,19 +122,18 @@ const Home = () => {
           </p>
         </article>
 
+        {/* Testimonial 4 - The Parliament */}
         <article
-          className="testimonial grid-col-span-2 flow bg-secondary-500 text-neutral-100"
+          className="testimonial flow bg-primary-400 text-neutral-100"
           onMouseEnter={() => handlePlayAudio(parliamentRef)}
           onMouseLeave={() => handleStopAudio(parliamentRef)}
         >
           <audio ref={parliamentRef} src={parliamentAudio}></audio>
           <div className="flex">
+            <img src={parliamentImage} alt="Parliament" />
             <div>
-              <img className="border-primary-400" src={parliamentImage} alt="Indian Parliament" />
-            </div>
-            <div>
-              <h2 className="name">Parliament of India</h2>
-              <p className="position">Legislative Authority</p>
+              <h2 className="name">The Parliament</h2>
+              <p className="position">Supreme Legislative Body</p>
             </div>
           </div>
           <p>
@@ -160,16 +144,15 @@ const Home = () => {
           </p>
         </article>
 
+        {/* Testimonial 5 - The Judiciary */}
         <article
-          className="testimonial flow bg-neutral-100 text-secondary-400"
+          className="testimonial flow bg-secondary-400 text-neutral-100"
           onMouseEnter={() => handlePlayAudio(judiciaryRef)}
           onMouseLeave={() => handleStopAudio(judiciaryRef)}
         >
           <audio ref={judiciaryRef} src={judiciaryAudio}></audio>
           <div className="flex">
-            <div>
-              <img src={judiciaryImage} alt="Indian Judiciary" />
-            </div>
+            <img src={judiciaryImage} alt="Judiciary" />
             <div>
               <h2 className="name">The Judiciary</h2>
               <p className="position">Guardian of the Constitution</p>

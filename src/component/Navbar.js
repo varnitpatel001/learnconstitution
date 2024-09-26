@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Navbar(props) {
+export default function Navbar() {
   return (
     <div
       style={{

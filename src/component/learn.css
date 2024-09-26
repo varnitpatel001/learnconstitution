@@ -1,0 +1,60 @@
+
+.description {
+  background: rgb(242,202,128);
+  background: radial-gradient(circle, rgba(242,202,128,0.9037990196078431) 25%, rgba(165,182,203,1) 100%);  padding: 30px; /* Padding for spacing around the text */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: left; /* Align text to the left */
+    margin-top: 20px;
+
+   
+    
+    overflow: hidden; /* Ensure no overflow issues */
+
+
+  }
+  
+  .description h1, .description h2 {
+    font-size: 2.5rem; /* Large and bold headline */
+    color: #004085; /* A deep blue for a professional tone */
+    font-weight: 700; /* Bold for prominence */
+    margin-bottom: 20px; /* Spacing below the heading */
+  }
+  
+  .description p.lead {
+    font-size: 1.25rem; /* Slightly larger text for readability */
+    line-height: 1.75; /* Increased line spacing for better readability */
+    color: #495057; /* A dark gray for easy reading */
+    font-weight: 400; /* Regular weight for body text */
+    margin-bottom: 1rem; /* Default spacing between paragraphs */
+  }
+  
+  .description ul.lead {
+    font-size: 1.15rem; /* Adjust font size for list items */
+    color: #495057; /* Match the color with the paragraph text */
+    margin-left: 20px; /* Indent the list for structure */
+    list-style-type: disc; /* Add bullets to the list */
+  }
+  
+  .description ul.lead li {
+    margin-bottom: 10px; /* Space between list items */
+  }
+  
+  @media (max-width: 768px) {
+    .description {
+      padding: 20px; /* Adjust padding for smaller screens */
+    }
+  
+    .description h1, .description h2 {
+      font-size: 2rem; /* Slightly smaller heading for mobile */
+    }
+  
+    .description p.lead {
+      font-size: 1.15rem; /* Slightly smaller text for readability on mobile */
+    }
+  
+    .description ul.lead {
+      font-size: 1.05rem; /* Slightly smaller font size for list items on mobile */
+    }
+  }
+  

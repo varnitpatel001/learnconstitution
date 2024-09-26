@@ -46,9 +46,7 @@ const Sidebar = () => {
               <CDBSidebarMenuItem icon="chart-line" className="sidebar-menu-item">Analytics</CDBSidebarMenuItem>
             </Link>
 
-            <Link exact to="/404" target="_blank" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="exclamation-circle" className="sidebar-menu-item">404 page</CDBSidebarMenuItem>
-            </Link>
+            
           </CDBSidebarMenu>
         </CDBSidebarContent>
 
@@ -58,7 +56,7 @@ const Sidebar = () => {
               padding: '20px 5px',
             }}
           >
-            Sidebar Footer
+            😁
           </div>
         </CDBSidebarFooter>
       </CDBSidebar>

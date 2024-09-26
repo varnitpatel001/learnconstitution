@@ -16,74 +16,84 @@
   --fs-500: 1.25rem;
 }
 
+/* Scoped Styles for Home Component */
+.home-page {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-400);
+  background-color: hsl(var(--clr-neutral-200));
+}
+
 /* Box sizing rules */
-*,
-*::before,
-*::after {
+.home-page *,
+.home-page *::before,
+.home-page *::after {
   box-sizing: border-box;
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+.home-page body,
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.home-page h4,
+.home-page p,
+.home-page figure,
+.home-page blockquote,
+.home-page dl,
+.home-page dd {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+/* Remove list styles on ul, ol elements with a list role */
+.home-page ul[role="list"],
+.home-page ol[role="list"] {
   list-style: none;
 }
 
 /* Set core root defaults */
-html:focus-within {
+.home-page html:focus-within {
   scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
-body {
+.home-page body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
+.home-page a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
-img,
-picture {
+.home-page img,
+.home-page picture {
   max-width: 100%;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
+.home-page input,
+.home-page button,
+.home-page textarea,
+.home-page select {
   font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
+  .home-page html:focus-within {
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
+  .home-page *,
+  .home-page *::before,
+  .home-page *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -91,100 +101,97 @@ select {
   }
 }
 
-body {
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
-
-  font-family: var(--ff-primary);
-  font-weight: var(--fw-400);
-
-  background-color: hsl(var(--clr-neutral-200));
-}
-
-h1,
-h2,
-h3 {
+/* Header Styles */
+.home-page h1,
+.home-page h2,
+.home-page h3 {
   font-weight: var(--fw-700);
 }
 
-/* utilities */
-.flex {
+/* Utilities */
+.home-page .flex {
   display: flex;
   gap: var(--gap, 1rem);
 }
 
-.flow > *:where(:not(:first-child)) {
+.home-page .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-spacer, 1em);
 }
 
-.bg-primary-400 {
+.home-page .bg-primary-400 {
   background: hsl(var(--clr-primary-400));
 }
-.bg-secondary-400 {
+
+.home-page .bg-secondary-400 {
   background: hsl(var(--clr-secondary-400));
 }
-.bg-secondary-500 {
+
+.home-page .bg-secondary-500 {
   background: hsl(var(--clr-secondary-500));
 }
 
-.bg-neutral-100 {
+.home-page .bg-neutral-100 {
   background: hsl(var(--clr-neutral-100));
 }
 
-.text-neutral-100 {
+.home-page .text-neutral-100 {
   color: hsl(var(--clr-neutral-100));
 }
-.text-secondary-400 {
+
+.home-page .text-secondary-400 {
   color: hsl(var(--clr-secondary-400));
 }
-.border-primary-400 {
+
+.home-page .border-primary-400 {
   border: 2px solid #a775f1;
 }
 
-/* components */
-.testimonial-grid {
+/* Components */
+.home-page .testimonial-grid {
   display: grid;
   gap: 1.5rem;
   grid-auto-columns: 1fr;
   grid-template-areas:
-   'one'
-   'two'
-   'three'
-   'four'
-   'five';
-
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
   padding-block: 2rem;
   width: min(95%, 70rem);
   margin-inline: auto;
 }
 
-.testimonial {
+.home-page .testimonial {
   font-size: var(--fs-400);
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
 }
 
-.testimonial:nth-child(1) {
+.home-page .testimonial:nth-child(1) {
   grid-area: one;
 }
-.testimonial:nth-child(2) {
+
+.home-page .testimonial:nth-child(2) {
   grid-area: two;
 }
-.testimonial:nth-child(3) {
+
+.home-page .testimonial:nth-child(3) {
   grid-area: three;
 }
-.testimonial:nth-child(4) {
+
+.home-page .testimonial:nth-child(4) {
   grid-area: four;
 }
-.testimonial:nth-child(5) {
+
+.home-page .testimonial:nth-child(5) {
   grid-area: five;
 }
 
 @media screen and (min-width: 33em) {
-  .testimonial-grid {
-      grid-template-areas:
+  .home-page .testimonial-grid {
+    grid-template-areas:
       "one one"
       "two three"
       "five five"
@@ -193,18 +200,18 @@ h3 {
 }
 
 @media screen and (min-width: 38em) {
-  .testimonial-grid {
+  .home-page .testimonial-grid {
     grid-template-areas:
-     'one one'
-     'two five'
-     'three five'
-     'four four';
+      'one one'
+      'two five'
+      'three five'
+      'four four';
   }
 }
 
 @media screen and (min-width: 54em) {
-  .testimonial-grid {
-      grid-template-areas:
+  .home-page .testimonial-grid {
+    grid-template-areas:
       "one one two"
       "five five five"
       "three four four";
@@ -212,42 +219,59 @@ h3 {
 }
 
 @media screen and (min-width: 75em) {
-  .testimonial-grid {
-      grid-template-areas:
+  .home-page .testimonial-grid {
+    grid-template-areas:
       "one one two five"
       "three four four five";
   }
 }
 
-
-.testimonial.quote {
+.home-page .testimonial.quote {
   background-image: url("./images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: top right 10%;
 }
 
-.testimonial img {
+.home-page .testimonial img {
   width: 3rem;
   aspect-ratio: 1;
   border-radius: 50%;
 }
 
-.testimonial .name {
+.home-page .testimonial .name {
   font-size: var(--fs-400);
   font-weight: var(--fw-400);
   line-height: 1;
 }
 
-.testimonial .position {
+.home-page .testimonial .position {
   font-size: var(--fs-300);
   opacity: 0.5;
 }
 
-.testimonial > p:first-of-type {
+.home-page .testimonial > p:first-of-type {
   font-size: var(--fs-500);
   line-height: 1.2;
 }
 
-.testimonial > p:last-of-type {
+.home-page .testimonial > p:last-of-type {
   opacity: 0.7;
+}
+
+/* Button Styles */
+.home-page .audio-btn {
+
+  padding: 0.5rem 1rem;
+  font-size: var(--fs-400);
+  background: rgb(128,185,242);
+  background: radial-gradient(circle, rgba(128,185,242,0.9037990196078431) 25%, rgba(196,57,31,0.9290091036414566) 100%);
+  color: hsl(var(--clr-neutral-100));
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-page .audio-btn:hover {
+  background-color: hsl(var(--clr-primary-400) / 0.8);
 }

@@ -1,0 +1,101 @@
+
+.article {
+  background: rgb(242,202,128);
+  background: radial-gradient(circle, rgba(242,202,128,0.9037990196078431) 25%, rgba(165,182,203,1) 100%);  padding: 30px; /* Padding for spacing around the text */
+    padding: 20px; /* Inner spacing */
+    margin: 20px auto; /* Centered with margin */
+    margin-top: 0;
+    max-width: 800px; /* Maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Headings */
+  .article h1 {
+    font-size: 2.5rem; /* Larger font for main title */
+    color: #343a40; /* Dark color for contrast */
+    margin-bottom: 15px; /* Spacing below the title */
+  }
+  
+  .article h2 {
+    font-size: 2rem; /* Size for section titles */
+    color: #495057; /* Slightly lighter than h1 */
+    margin-top: 20px; /* Spacing above sections */
+    margin-bottom: 10px; /* Spacing below sections */
+  }
+  
+  .article h3 {
+    font-size: 1.5rem; /* Size for subsection titles */
+    color: #6c757d; /* Grey color for subsections */
+    margin-top: 15px; /* Spacing above subsections */
+  }
+  
+  /* Paragraphs */
+  .article p {
+    font-size: 1.1rem; /* Standard font size */
+    color: #212529; /* Standard text color */
+    line-height: 1.6; /* Spacing between lines */
+    margin-bottom: 15px; /* Spacing below paragraphs */
+  }
+  
+  /* Lists */
+  .article ul {
+    list-style-type: disc; /* Bullet points for lists */
+    padding-left: 20px; /* Indentation for lists */
+  }
+  
+  .article li {
+    margin-bottom: 10px; /* Spacing between list items */
+    font-size: 1.1rem; /* Font size for list items */
+    color: #212529; /* Standard text color */
+  }
+  
+  /* Lead Text */
+  .article .lead {
+    font-weight: 300; /* Lighter weight for lead text */
+  }
+  
+  /* Button Styles */
+  .btn {
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border: none; /* No border */
+    color: white; /* Text color */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; /* Secondary button color */
+    border: none; /* No border */
+    color: white; /* Text color */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .article {
+      padding: 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .article h1 {
+      font-size: 2rem; /* Adjust size for smaller screens */
+    }
+  
+    .article h2 {
+      font-size: 1.75rem; /* Adjust size for smaller screens */
+    }
+  
+    .article h3 {
+      font-size: 1.25rem; /* Adjust size for smaller screens */
+    }
+  }
+  
